@@ -22,6 +22,10 @@ Run Kerpy in your script and you are done.
 - I do not support any type of malicious activity with my code, nor take any responsability for any damage caused by it. Use at your own risk. 
 - For learning purposes
 
+## Note
+- ⭐️ Give me a Star!! Kerpy is constantly updating, support us!
+- The analysis was done with my grabber (+8 features), this without having obfuscated the source code (either with pyarmor etc), I recommend using Kerpy + obfuscate your code for best results.
+
 ## Contact Me 💻
 
 Telegram: @Lawxsz
