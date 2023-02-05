@@ -14,7 +14,7 @@ Kerpy is a tool designed to bypass VirusTotal detections, this project is in bet
 
 ```
 git clone https://github.com/Lawxsz/bypass-virus-total
-pip3 install -r requirements.txt
+pip3 install -r requeriments.txt
 ```
 Run Kerpy in your script and you are done.
 
