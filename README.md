@@ -1,2 +1,8 @@
-# bypass-virus-total
-Script made in python to try to have as few detections as possible in Virustotal.
+# Kerpy Bypass
+
+Kerpy is a tool designed to bypass VirusTotal detections, this project is in beta and will be improved!
+
+## Before
+
+
+## After
