@@ -8,7 +8,7 @@ Kerpy is a tool designed to bypass VirusTotal detections, this project is in bet
 
 ## After ✅
 
-![469](469.PNG)
+![469](469.png)
 
 ## Install ❗️
 
