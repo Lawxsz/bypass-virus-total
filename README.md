@@ -4,11 +4,11 @@ Kerpy is a tool designed to bypass VirusTotal detections, this project is in bet
 
 ## Before ❌
 
-![2detect](2detect.png)
+![18detect](18detect.png)
 
 ## After ✅
 
-![18detect](18detect.png)
+![2detect](2detect.png)
 
 ## Install ❗️
 
