@@ -18,6 +18,12 @@ pip3 install -r requeriments.txt
 ```
 Run Kerpy in your script and you are done.
 
+## Features
+- 🚀 Auto Updater List
+- 🌠 +1500 VM List Blocked
+- ⚡ Anti-VM (RDP, VirtualBox, etc)
+- 🌟 Filters: MAC, HWID, IP, NAME, GPU, GUIDS, BIOS, AND DLL!
+
 ## IMPORTANT!
 - I do not support any type of malicious activity with my code, nor take any responsability for any damage caused by it. Use at your own risk. 
 - For learning purposes
