@@ -1,18 +1,16 @@
-# -* kerpy tool by Lawxsz on github and telegram!! -* #
-
 import re, uuid, wmi, requests, os, ctypes, sys, subprocess, socket
 
-def get_base_prefix_compat(): # define all of the checks
+
+def get_base_prefix_compat(): 
     return getattr(sys, "base_prefix", None) or getattr(sys, "real_prefix", None) or sys.prefix
 
 def in_virtualenv(): 
     return get_base_prefix_compat() != sys.prefix
 
-if in_virtualenv() == True: # if we are in a vm
-    sys.exit() # exit
+if in_virtualenv() == True:
+    sys.exit() 
     
-class BypassVM:
-
+class Kerpy:
     def registry_check(self):  
         reg1 = os.system("REG QUERY HKEY_LOCAL_MACHINE\\SYSTEM\\ControlSet001\\Control\\Class\\{4D36E968-E325-11CE-BFC1-08002BE10318}\\0000\\DriverDesc 2> nul")
         reg2 = os.system("REG QUERY HKEY_LOCAL_MACHINE\\SYSTEM\\ControlSet001\\Control\\Class\\{4D36E968-E325-11CE-BFC1-08002BE10318}\\0000\\ProviderName 2> nul")       
@@ -48,10 +46,12 @@ class BypassVM:
             print("Sandboxie DLL Detected")
             sys.exit()
         except:
-            pass              
+            pass        
+        
         processl = requests.get("https://raw.githubusercontent.com/Lawxsz/bypass-virus-total/main/utils/process.txt").text
         if processl in processList:
             sys.exit()
+            
     def mac_check(self):
         mac_address = ':'.join(re.findall('..', '%012x' % uuid.getnode()))
         mac_list = requests.get("https://raw.githubusercontent.com/6nz/virustotal-vm-blacklist/main/mac_list.txt").text
@@ -106,13 +106,3 @@ class BypassVM:
       disk_serial = disk.SerialNumber
      if disk_serial in serial_disk:
          sys.exit()
-
-test = BypassVM()
-test.registry_check()
-test.processes_and_files_check()
-test.mac_check()
-test.check_pc()
-test.checkgpu()
-test.hwid_vm()
-test.check_ip()
-test.profiles()
