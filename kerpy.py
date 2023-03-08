@@ -1,21 +1,26 @@
-import re, uuid, wmi, requests, os, ctypes, sys, subprocess, socket
+import re
+import uuid
+import wmi
+import requests
+import os
+import ctypes
+import sys
+import subprocess
+import socket
 
-
-def get_base_prefix_compat(): 
+def get_base_prefix_compat():
     return getattr(sys, "base_prefix", None) or getattr(sys, "real_prefix", None) or sys.prefix
 
-def in_virtualenv(): 
-    return get_base_prefix_compat() != sys.prefix
 
-if in_virtualenv() == True:
-    sys.exit() 
+def in_virtualenv():
+    return get_base_prefix_compat() != sys.prefix
     
 class Kerpy:
-    def registry_check(self):  
-        reg1 = os.system("REG QUERY HKEY_LOCAL_MACHINE\\SYSTEM\\ControlSet001\\Control\\Class\\{4D36E968-E325-11CE-BFC1-08002BE10318}\\0000\\DriverDesc 2> nul")
-        reg2 = os.system("REG QUERY HKEY_LOCAL_MACHINE\\SYSTEM\\ControlSet001\\Control\\Class\\{4D36E968-E325-11CE-BFC1-08002BE10318}\\0000\\ProviderName 2> nul")       
-        
-        if reg1 != 1 and reg2 != 1:    
+    def registry_check(self):
+        cmd = "REG QUERY HKEY_LOCAL_MACHINE\\SYSTEM\\ControlSet001\\Control\\Class\\{4D36E968-E325-11CE-BFC1-08002BE10318}\\0000\\"
+        reg1 = subprocess.run(cmd + "DriverDesc", shell=True, stderr=subprocess.DEVNULL)
+        reg2 = subprocess.run(cmd + "ProviderName", shell=True, stderr=subprocess.DEVNULL)
+        if reg1.returncode == 0 and reg2.returncode == 0:
             print("VMware Registry Detected")
             sys.exit()
 
