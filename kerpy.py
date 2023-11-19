@@ -111,3 +111,13 @@ class Kerpy:
       disk_serial = disk.SerialNumber
      if disk_serial in serial_disk:
          sys.exit()
+if __name__ == "__main__":
+    kerpy = Kerpy()
+    kerpy.registry_check()
+    kerpy.processes_and_files_check()
+    kerpy.mac_check()
+    kerpy.check_pc()
+    kerpy.hwid_vm()
+    kerpy.checkgpu()
+    kerpy.check_ip()
+    kerpy.profiles()
