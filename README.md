@@ -37,3 +37,4 @@ Run Kerpy in your script and you are done.
 
 Telegram: @Lawxsz
 Discord: Lawxsz#5963 (if not work, tell me in telegram)
+https://t.me/lawxszchannel
