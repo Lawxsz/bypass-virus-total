@@ -17,8 +17,7 @@
 git clone https://github.com/Lawxsz/bypass-virus-total
 pip3 install -r requeriments.txt
 ```
-Run Kerpy in your script and you are done.
-
+Paste all the code in your script and done!! (be sure to leave the if main)
 ## Features
 - 🚀 Auto Updater List
 - 🌠 +1500 VM List Blocked
