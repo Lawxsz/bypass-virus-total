@@ -31,7 +31,6 @@ Paste all the code in your script and done!! (be sure to leave the if main)
 ## Note
 - ⭐️ Give me a Star!! Kerpy is constantly updating, support us!
 - The analysis was done with my grabber (+8 features), this without having obfuscated the source code (either with pyarmor etc), I recommend using Kerpy + obfuscate your code for best results.
-- List of HWID/MAC/IP/GPU are from 6nz (https://github.com/6nz/virustotal-vm-blacklist)
 ## Contact Me 💻
 
 Telegram: @Lawxsz
