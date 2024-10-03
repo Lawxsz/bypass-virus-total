@@ -1,7 +1,7 @@
 # Virus Total Bypass ✅
 
 - Kerpy is a tool designed to bypass VirusTotal detections, this project is in beta and will be improved!
-- Discord: https://discord.gg/WYwMSTyZ
+- Discord: telegram only t.me/prysmax
 - Telegram: https://t.me/lawxszchannel
 ## Before ❌
 
