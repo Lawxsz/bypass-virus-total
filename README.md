@@ -17,6 +17,7 @@
 git clone https://github.com/Lawxsz/bypass-virus-total
 pip3 install -r requeriments.txt
 ```
+
 Paste all the code in your script and done!! (be sure to leave the if main)
 ## Features
 - 🚀 Auto Updater List
@@ -34,5 +35,5 @@ Paste all the code in your script and done!! (be sure to leave the if main)
 ## Contact Me 💻
 
 Telegram: @Lawxsz
-Discord: Lawxsz#5963 (if not work, tell me in telegram)
+Discord: lawxszoficialdisxd (if not work, tell me in telegram)
 https://t.me/lawxszchannel
